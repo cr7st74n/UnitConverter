@@ -31,5 +31,15 @@ public class Main {
 
         float totalValue = (kilogramsValue*1000000)+(gramsValue*1000)+milligramsValue;
         System.out.println("The equivalent total weight in milligrams is: " +totalValue +" mg");
+
+        // PP 2.4
+        System.out.println("Hello welcome to the Unit Converter Program!");
+
+        float newValueInMg = 9070056;
+
+        float KgEquivalent = newValueInMg/1000000;
+
+
+        System.out.println("The equivalent total kg is: " +KgEquivalent +" kg");
     }
 }
