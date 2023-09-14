@@ -3,22 +3,33 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        // PP 2.1
         System.out.println("Hello welcome to the Unit Converter Program!");
         System.out.println("Please enter your inches unit to convert to foot");
         Scanner sc = new Scanner(System.in);
 
-        double ConvertUnit = sc.nextDouble();
+        float ConvertUnit = sc.nextFloat();
 
         System.out.println("the feet unist is : "+String.format("%.2f",ConvertUnit/12));
 
         //this part of the program will convert grams to pounds.
-
+        // PP 2.2
         System.out.println("Hello welcome to the Unit Converter Program!");
         System.out.println("Please enter your grams unit to convert to pounds");
 
-        double Convertgrams = sc.nextDouble();
+        float Convertgrams = sc.nextFloat();
 
         System.out.println("the pounds unist is : "+String.format("%.2f",Convertgrams*0.002205));
 
+        // PP 2.3
+        System.out.println("Hello welcome to the Unit Converter Program!");
+        float kilogramsValue = 1;
+        float gramsValue = 50;
+        float milligramsValue = 42;
+
+        System.out.println("--The equivalent weight in milligrams--  of: \n" +kilogramsValue +" kg \n" +gramsValue +" g \n" +milligramsValue +" mg");
+
+        float totalValue = (kilogramsValue*1000000)+(gramsValue*1000)+milligramsValue;
+        System.out.println("The equivalent total weight in milligrams is: " +totalValue +" mg");
     }
 }
