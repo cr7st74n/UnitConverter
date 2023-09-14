@@ -14,6 +14,7 @@ public class Main {
 
         //this part of the program will convert grams to pounds.
         // PP 2.2
+        System.out.println();
         System.out.println("Hello welcome to the Unit Converter Program!");
         System.out.println("Please enter your grams unit to convert to pounds");
 
@@ -22,6 +23,7 @@ public class Main {
         System.out.println("the pounds unist is : "+String.format("%.2f",Convertgrams*0.002205));
 
         // PP 2.3
+        System.out.println();
         System.out.println("Hello welcome to the Unit Converter Program!");
         float kilogramsValue = 1;
         float gramsValue = 50;
@@ -33,13 +35,26 @@ public class Main {
         System.out.println("The equivalent total weight in milligrams is: " +totalValue +" mg");
 
         // PP 2.4
+        System.out.println();
         System.out.println("Hello welcome to the Unit Converter Program!");
 
-        float newValueInMg = 9070056;
+        float  newValueInMg = 9070056;
 
+        // KG value, and its version in mg
         float KgEquivalent = newValueInMg/1000000;
+        int newKgRound = Math.round(KgEquivalent);
+
+        // subtract newKG equivalent with the original value.
+        float newKgEquivalent = (newKgRound * 1000000);
+
+        float G_Equivalent = newValueInMg - newKgEquivalent;
+        int newGRound = Math.round(G_Equivalent/1000);
+
+        // subtract newG with the G_equivalent
+        float newGEquivalent = (newGRound* 1000);
+        float filaMGValue = G_Equivalent - newGEquivalent;
 
 
-        System.out.println("The equivalent total kg is: " +KgEquivalent +" kg");
+        System.out.println("The equivalent total kg is: "+newKgRound +" kg, " +newGRound +" g, " +filaMGValue +" mg" );
     }
 }
